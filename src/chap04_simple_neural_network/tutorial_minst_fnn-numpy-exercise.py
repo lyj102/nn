@@ -258,7 +258,7 @@ h2_soft_grad = softmax.backward(h2_log_grad)
 h2_grad, W2_grad = mul_h2.backward(h2_soft_grad)
 h1_relu_grad = relu.backward(h2_grad)
 h1_grad, W1_grad = mul_h1.backward(h1_relu_grad)
-
+# 打印手动计算的log(prob)梯度
 print(h2_log_grad)
 print('--'*20)
 # print(W2_grad)
